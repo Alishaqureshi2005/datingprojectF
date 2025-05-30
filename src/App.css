@@ -1,0 +1,73 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Fixed footer styling */
+  .fixed-footer {
+    position: fixed;
+    z-index: 200;
+    bottom: 2%; /* Distance from the bottom */
+    left: 50%; /* Position it in the center horizontally */
+    transform: translateX(-50%); /* Align horizontally to the center */
+    background-color: #f6bec0; /* Light pink background color */
+    padding: 1rem;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 360px;
+}
+
+  
+  /* Footer nav styles */
+  .footer-nav {
+    display: flex;
+    flex-direction: column; 
+    gap: .2rem;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: rgb(3, 44, 106);
+    font-size: 0.9rem;
+    text-align: right; /* Align text to the right */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover and active link styling */
+  .footer-nav a:hover {
+    color: #01204F; 
+    transform: translateX(-5px); /* Subtle animation */
+  }
+  
+  .footer-nav .active-link {
+    /* color: #60a5fa; Light blue for active links */
+    font-weight: bold;
+    /* text-decoration: underline; */
+  }
+/* Styling for the toggle button */
+.button {
+    background-color: #EF9DA1;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #f0969a;
+  }
+    

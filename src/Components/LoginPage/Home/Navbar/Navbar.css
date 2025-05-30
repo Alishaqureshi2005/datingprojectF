@@ -1,0 +1,126 @@
+.navbar {
+  padding: 10px 20px;
+  align-items: stretch;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar .tabs-group .tab {
+  color: #ffff; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: solid 0.5px transparent;
+}
+
+.navbar .tabs-group .tab.active {
+  color: #53585e;
+  border-color: #ca84b4;
+  background: #e9ecef; 
+}
+
+.navbar .button {
+  gap: 20px;
+}
+
+.navbar .menu-btn,
+.navbar .cancel-btn {
+  display: none;
+}
+
+.navbar .cancel-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 110;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* Responsive Code */
+@media (max-width: 1210px) {
+  .navbar .handles-container {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .navbar .services-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1065px) {
+  .navbar .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    max-width: 320px;
+    min-height: 100vh;
+    z-index: 150;
+    background: #f8f9fa; /* Light background for sidebar */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px;
+    padding-top: 8rem;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  .navbar .sidebar.visible {
+    left: 0;
+  }
+  .navbar .menu-btn,
+  .navbar .cancel-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar .contact-btn {
+    display: none;
+  }
+}
+
+.flex1 {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-center1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon-wrapper {
+  width: 2.7rem;
+  height: 2.7rem;
+  min-width: 2.7rem;
+  min-height: 2.7rem;
+  max-width: 2.7rem;
+  max-height: 2.7rem;
+  background: #EF9DA1;
+  font-size: 20px;
+  border-radius: 100%;
+  color: #ffff;
+  transition: all 400ms ease;
+}
+
+.icon-wrapper:hover {
+  background-color: #e79094;
+  color: #ffff;
+  transform: scale(1.1);
+}
