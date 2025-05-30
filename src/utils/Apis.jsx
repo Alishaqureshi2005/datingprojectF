@@ -17,10 +17,13 @@ export const signup = async (userData) => {
 // Login user
 export const login = async (credentials) => {
   try {
+    console.log('Attempting login to:', `${API_BASE_URL}/users/login`);
     const response = await axios.post(`${API_BASE_URL}/users/login`, credentials);
+    console.log('Login response:', response);
     return response.data; // Returns the token and user data
   } catch (error) {
-    throw error.response.data; // Throws error message from the backend
+    console.error('Login error:', error);
+    throw error.response?.data || error; // Throws error message from the backend
   }
 };
 
@@ -230,7 +233,7 @@ export const updateProfile = async (profileData, token) => {
 export const followUser = async (targetUserId, token) => {
   try {
     const response = await axios.post(
-      `{${API_BASE_URL}/profile/follow/${targetUserId}`,
+      `${API_BASE_URL}/profile/follow/${targetUserId}`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );
