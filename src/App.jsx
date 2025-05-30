@@ -10,7 +10,7 @@ import EmailVerification from './pages/EmailVerification';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ForgotPassword from './Components/ForgetPassword';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { ErrorBoundary } from './Components/ErrorBoundary';
 
 // Enhanced Error Fallback Component
 function ErrorFallback({ error, resetErrorBoundary }) {
