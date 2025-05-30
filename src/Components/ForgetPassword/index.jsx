@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/users/forget-password', { email });
+      await axios.post('https://datingprojectb.onrender.com/api/users/forget-password', { email });
       setStep(2);
       setError('');
     } catch (err) {
@@ -29,7 +29,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/users/verify-reset-otp', { email, otp });
+      await axios.post('https://datingprojectb.onrender.com/api/users/verify-reset-otp', { email, otp });
       setStep(3);
       setError('');
     } catch (err) {
@@ -43,7 +43,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/users/reset-password', { email, newPassword });
+      await axios.post('https://datingprojectb.onrender.com/api/users/reset-password', { email, newPassword });
       navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Password reset failed');
