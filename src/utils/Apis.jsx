@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://datingprojectb.onrender.com/api';
+const API_BASE_URL = 'http://50.6.175.69/api';
 
 // Create a new user (signup)
 export const signup = async (userData) => {
